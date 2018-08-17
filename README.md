@@ -4,7 +4,15 @@
 [![dependencies Status](https://img.shields.io/david/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input)
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input?type=dev)
 
-A little plugin for Bootstrap 4 custom file input, with no dependencies.
+A little plugin which dynamize Bootstrap 4 custom file input, with no dependencies.
+
+Features:
+ - Works with Bootstrap 4
+ - Works without *dependencies*
+ - Display file name
+ - Display file names for `multiple` input
+ - Reset your custom file input to their initial state
+ - Small only **2kb** and less if you gzip it
 
 ## Install
 
