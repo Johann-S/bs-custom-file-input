@@ -1,5 +1,9 @@
 # bs-custom-file-input
 
+[![npm version](https://img.shields.io/npm/v/bs-custom-file-input.svg)](https://www.npmjs.com/package/bs-custom-file-input)
+[![dependencies Status](https://img.shields.io/david/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input)
+[![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input?type=dev)
+
 A little plugin for Bootstrap 4 custom file input, with no dependencies.
 
 ## Install

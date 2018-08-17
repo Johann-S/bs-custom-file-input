@@ -14,9 +14,7 @@
     "build": "rollup -c && rollup -c --environment PROD"
 	},
 	"files": [
-    "dist/*.{js,map}",
-    "README.md",
-    "LICENSE"
+    "dist/*.{js,map}"
   ],
   "keywords": [
     "bootstrap",
