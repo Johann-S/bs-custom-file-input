@@ -2,11 +2,22 @@
   "name": "bs-custom-file-input",
   "version": "1.0.0",
   "description": "A little plugin for Bootstrap 4 custom file input",
-  "main": "index.js",
+	"main": "dist/bs-custom-file-input.js",
+	"bugs": {
+    "url": "https://github.com/Johann-S/bs-custom-file-input/issues"
+	},
+	"engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c && rollup -c --environment PROD"
-  },
+	},
+	"files": [
+    "dist/*.{js,map}",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "bootstrap",
     "bootstrap 4",
