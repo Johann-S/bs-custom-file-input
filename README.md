@@ -16,9 +16,17 @@ Features:
 
 ## Install
 
+### With NPM
 ```shell
 npm install bs-custom-file-input --save
 ```
+
+### CDN
+
+CDN | Link
+------------ | -------------
+unpkg | [`https://unpkg.com/bs-custom-file-input`](https://unpkg.com/bs-custom-file-input) 
+unpkg, minified | [`https://unpkg.com/bs-custom-file-input/dist/bs-custom-file-input.min.js`](https://unpkg.com/bs-custom-file-input/dist/bs-custom-file-input.min.js)
 
 ## How to use it
 
