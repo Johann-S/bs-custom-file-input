@@ -19,7 +19,15 @@ $(document).ready(function () {
 })
 ```
 
+### Use it with npm
+
+```javascript
+import bsCustomFileInput from 'bs-custom-file-input'
+```
+
 For more example do not hesitate to open this file: https://github.com/Johann-S/bs-custom-file-input/blob/master/tests/index.html
+
+This lib is UMD ready so you can use it everywhere
 
 ## Methods
 
