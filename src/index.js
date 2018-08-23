@@ -14,6 +14,8 @@ const Event = {
   FORMRESET     : 'reset',
 }
 
+const customProperty = 'bsCustomFileInput'
+
 const bsCustomFileInput = {
   init() {
     const customFileInputList = [].slice.call(document.querySelectorAll(Selector.CUSTOMFILE))
@@ -22,7 +24,7 @@ const bsCustomFileInput = {
     for (let i = 0, len = customFileInputList.length; i < len; i++) {
       const input = customFileInputList[i]
 
-      Object.defineProperty(input, 'bsCustomFileInput', {
+      Object.defineProperty(input, customProperty, {
         value: {
           defaultText: getDefaultText(input),
         },
@@ -47,6 +49,7 @@ const bsCustomFileInput = {
       const input = customFileInputList[i]
 
       restoreDefaultText(input)
+      delete input[customProperty]
 
       input.removeEventListener(Event.INPUTCHANGE, handleInputChange)
       input.removeEventListener(Event.INPUTFOCUSIN, handleFocusin)
