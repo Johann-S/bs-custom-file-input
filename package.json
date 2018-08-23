@@ -24,6 +24,10 @@
   ],
   "author": "Johann-S <johann.servoire@gmail.com>",
   "homepage": "https://github.com/Johann-S/bs-custom-file-input",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johann-S/bs-custom-file-input.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.0.0-rc.1",
