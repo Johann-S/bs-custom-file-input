@@ -3,6 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/bs-custom-file-input.svg)](https://www.npmjs.com/package/bs-custom-file-input)
 [![dependencies Status](https://img.shields.io/david/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input)
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input?type=dev)
+[![Build Status](https://img.shields.io/travis/Johann-S/bs-custom-file-input/master.svg)](https://travis-ci.org/Johann-S/bs-custom-file-input)
 
 A little plugin which dynamize Bootstrap 4 custom file input, with no dependencies.
 
@@ -25,7 +26,7 @@ npm install bs-custom-file-input --save
 
 CDN | Link
 ------------ | -------------
-unpkg | [`https://unpkg.com/bs-custom-file-input`](https://unpkg.com/bs-custom-file-input) 
+unpkg | [`https://unpkg.com/bs-custom-file-input`](https://unpkg.com/bs-custom-file-input)
 unpkg, minified | [`https://unpkg.com/bs-custom-file-input/dist/bs-custom-file-input.min.js`](https://unpkg.com/bs-custom-file-input/dist/bs-custom-file-input.min.js)
 
 ## How to use it
