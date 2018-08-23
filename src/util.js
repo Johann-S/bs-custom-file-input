@@ -1,32 +1,32 @@
 import Selector from './selector'
 
 const getDefaultText = (input) => {
-	let defaultText = ''
+  let defaultText = ''
 
-	if (input.parentNode) {
-		const label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL)
+  if (input.parentNode) {
+    const label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL)
 
-		if (label) {
-			defaultText = label.innerHTML
-		}
-	}
+    if (label) {
+      defaultText = label.innerHTML
+    }
+  }
 
-	return defaultText
+  return defaultText
 }
 
 const restoreDefaultText = (input) => {
-	const defaultText = input.bsCustomFileInput.defaultText
+  const defaultText = input.bsCustomFileInput.defaultText
 
-	if (input.parentNode) {
-		const label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL)
+  if (input.parentNode) {
+    const label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL)
 
-		if (label) {
-			label.innerHTML = defaultText
-		}
-	}
+    if (label) {
+      label.innerHTML = defaultText
+    }
+  }
 }
 
 export {
-	getDefaultText,
-	restoreDefaultText,
+  getDefaultText,
+  restoreDefaultText,
 }
