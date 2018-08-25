@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 const path = require('path')
 const babel = require('rollup-plugin-babel')
 const { uglify } = require('rollup-plugin-uglify')
@@ -9,36 +11,36 @@ const buildProd = process.env.PROD === 'true'
 let fileDest = './dist/bs-custom-file-input.js'
 
 const plugins = [
-	babel({
-		exclude: 'node_modules/**',
-	}),
+  babel({
+    exclude: 'node_modules/**',
+  }),
 ]
 
 if (buildProd) {
-	fileDest = './dist/bs-custom-file-input.min.js'
-	plugins.push(uglify({
-		output: {
-			comments: /^!/,
-		},
-	}))
+  fileDest = './dist/bs-custom-file-input.min.js'
+  plugins.push(uglify({
+    output: {
+      comments: /^!/,
+    },
+  }))
 }
 
 module.exports = {
-	input: './src/index.js',
-	output: {
-		banner:
+  input: './src/index.js',
+  output: {
+    banner:
 `/*!
  * BsCustomFileInput v${pkg.version} (${pkg.homepage})
  * Copyright ${year} ${pkg.author}
  * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
  */`,
-		file: fileDest,
-		format: 'umd',
-		name: 'bsCustomFileInput',
-		sourcemap: true,
-	},
-	watch: {
-    include: 'src/**.js'
+    file: fileDest,
+    format: 'umd',
+    name: 'bsCustomFileInput',
+    sourcemap: true,
   },
-	plugins,
+  watch: {
+    include: 'src/**.js',
+  },
+  plugins,
 }
