@@ -5,20 +5,22 @@
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input?type=dev)
 [![Build Status](https://img.shields.io/travis/Johann-S/bs-custom-file-input/master.svg)](https://travis-ci.org/Johann-S/bs-custom-file-input)
 
-A little plugin which dynamize Bootstrap 4 custom file input, with no dependencies.
+A little plugin which makes Bootstrap 4 custom file input dynamic with no dependencies.
 
 Features:
- - Works with Bootstrap 4
- - Works without *dependencies*
- - Display file name
- - Display file names for `multiple` input
- - Reset your custom file input to their initial state
- - Small only **2kb** and less if you gzip it
+
+- Works with Bootstrap 4
+- Works without *dependencies*
+- Display file name
+- Display file names for `multiple` input
+- Reset your custom file input to its initial state
+- Small, only **2kb** and less if you gzip it
 
 ## Install
 
-### With NPM
-```shell
+### With npm
+
+```sh
 npm install bs-custom-file-input --save
 ```
 
@@ -31,34 +33,34 @@ unpkg, minified | [`https://unpkg.com/bs-custom-file-input/dist/bs-custom-file-i
 
 ## How to use it
 
-You should wait for the document ready event and call the init method to dynamize your custom file input.
-We expose one global variable available everywhere : `bsCustomFileInput`
+You should wait for the document ready event and call the `init` method to make your custom file input dynamic.
+We expose one global variable available everywhere: `bsCustomFileInput`
 
-```javascript
+```js
 $(document).ready(function () {
-	bsCustomFileInput.init()
+  bsCustomFileInput.init()
 })
 ```
 
 ### Use it with npm
 
-```javascript
+```js
 import bsCustomFileInput from 'bs-custom-file-input'
 ```
 
-For more example do not hesitate to open this file: https://github.com/Johann-S/bs-custom-file-input/blob/master/tests/index.html
+For more examples check out [this file](https://github.com/Johann-S/bs-custom-file-input/blob/master/tests/index.html).
 
-This lib is UMD ready so you can use it everywhere
+This library is UMD ready so you can use it everywhere.
 
 ## Methods
 
 ### init
 
-This method will find your Bootstrap custom file input and will dynamize them.
+Finds your Bootstrap custom file input and will make them dynamic.
 
 ### destroy
 
-This method will remove this plugin from your Bootstrap custom file input and restore them at their first initial state
+Removes this plugin from your Bootstrap custom file input and restore them at their first initial state
 
 ## License
 
