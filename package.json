@@ -11,8 +11,8 @@
   },
   "scripts": {
     "dev": "rollup -c -w",
-		"build": "rollup -c && rollup -c --environment PROD",
-		"test": "eslint ./src"
+    "build": "rollup -c && rollup -c --environment PROD",
+    "test": "eslint ."
   },
   "files": [
     "dist/*.{js,map}"
