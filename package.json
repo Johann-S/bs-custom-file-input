@@ -13,7 +13,8 @@
     "dev": "rollup --environment TEST -c -w",
     "build": "rollup -c && rollup -c --environment PROD",
     "pretest": "cross-env NODE_ENV=test rollup -c --environment TEST",
-    "test": "eslint . && karma start karma.conf.js && npm run coveralls",
+    "test": "eslint . && npm run js-test && npm run coveralls",
+    "js-test": "karma start karma.conf.js",
     "coveralls": "shx cat tests/coverage/lcov.info | coveralls"
   },
   "files": [

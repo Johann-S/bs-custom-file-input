@@ -1,7 +1,5 @@
 import { getDefaultText, restoreDefaultText } from './util'
 import {
-  handleFocusin,
-  handleFocusout,
   handleFormReset,
   handleInputChange,
 } from './eventHandlers'
@@ -32,8 +30,6 @@ const bsCustomFileInput = {
       })
 
       input.addEventListener(Event.INPUTCHANGE, handleInputChange)
-      input.addEventListener(Event.INPUTFOCUSIN, handleFocusin)
-      input.addEventListener(Event.INPUTFOCUSOUT, handleFocusout)
     }
 
     for (let i = 0, len = formList.length; i < len; i++) {
@@ -53,8 +49,6 @@ const bsCustomFileInput = {
       input[customProperty] = undefined
 
       input.removeEventListener(Event.INPUTCHANGE, handleInputChange)
-      input.removeEventListener(Event.INPUTFOCUSIN, handleFocusin)
-      input.removeEventListener(Event.INPUTFOCUSOUT, handleFocusout)
     }
 
     for (let i = 0, len = formList.length; i < len; i++) {
