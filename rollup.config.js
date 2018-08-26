@@ -8,6 +8,7 @@ const pkg = require(path.resolve(__dirname, 'package.json'))
 const year = new Date().getFullYear()
 
 const buildProd = process.env.PROD === 'true'
+const buildTest = process.env.TEST === 'true'
 let fileDest = './dist/bs-custom-file-input.js'
 
 const plugins = [
@@ -15,6 +16,10 @@ const plugins = [
     exclude: 'node_modules/**',
   }),
 ]
+
+if (buildTest) {
+  fileDest = './tests/coverage/bs-custom-file-input.js'
+}
 
 if (buildProd) {
   fileDest = './dist/bs-custom-file-input.min.js'

@@ -15,12 +15,10 @@ const getSelectedFiles = (input) => {
 }
 
 function handleInputChange() {
-  if (this.parentNode) {
-    const label = this.parentNode.querySelector(Selector.CUSTOMFILELABEL)
+  const label = this.parentNode.querySelector(Selector.CUSTOMFILELABEL)
 
-    if (label) {
-      label.innerHTML = getSelectedFiles(this)
-    }
+  if (label) {
+    label.innerHTML = getSelectedFiles(this)
   }
 }
 

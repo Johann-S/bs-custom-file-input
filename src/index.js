@@ -28,6 +28,7 @@ const bsCustomFileInput = {
         value: {
           defaultText: getDefaultText(input),
         },
+        writable: true,
       })
 
       input.addEventListener(Event.INPUTCHANGE, handleInputChange)
@@ -49,7 +50,7 @@ const bsCustomFileInput = {
       const input = customFileInputList[i]
 
       restoreDefaultText(input)
-      delete input[customProperty]
+      input[customProperty] = undefined
 
       input.removeEventListener(Event.INPUTCHANGE, handleInputChange)
       input.removeEventListener(Event.INPUTFOCUSIN, handleFocusin)
