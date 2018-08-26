@@ -4,6 +4,7 @@
 [![dependencies Status](https://img.shields.io/david/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input)
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input?type=dev)
 [![Build Status](https://img.shields.io/travis/Johann-S/bs-custom-file-input/master.svg)](https://travis-ci.org/Johann-S/bs-custom-file-input)
+![Coveralls github branch](https://img.shields.io/coveralls/github/Johann-S/bs-custom-file-input/master.svg)
 
 A little plugin which makes Bootstrap 4 custom file input dynamic with no dependencies.
 
