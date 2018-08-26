@@ -22,16 +22,6 @@ function handleInputChange() {
   }
 }
 
-// Needed for keyboard users in firefox
-function handleFocusin() {
-  this.classList.add('focus')
-}
-
-// Needed for keyboard users in firefox
-function handleFocusout() {
-  this.classList.remove('focus')
-}
-
 function handleFormReset() {
   const customFileList = [].slice.call(this.querySelectorAll(Selector.CUSTOMFILE))
 
@@ -42,7 +32,5 @@ function handleFormReset() {
 
 export {
   handleInputChange,
-  handleFocusin,
-  handleFocusout,
   handleFormReset,
 }

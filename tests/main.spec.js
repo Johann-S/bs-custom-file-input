@@ -1,5 +1,5 @@
 /* eslint-env mocha, browser */
-/* global bsCustomFileInput: false, expect: false, assert: false, sinon: false */
+/* global bsCustomFileInput: false, expect: false, sinon: false */
 
 var mochaDiv
 
@@ -54,7 +54,7 @@ describe('bsCustomInputFile', function () {
 
       bsCustomFileInput.init()
 
-      expect(spy.callCount).equal(3)
+      expect(spy.called).equal(true)
     })
 
     it('should add an event listener on forms', function () {
@@ -188,33 +188,6 @@ describe('bsCustomInputFile', function () {
       })
 
       input.dispatchEvent(new Event('change'))
-    })
-  })
-
-  describe('util - handleFocusin', function () {
-    it('should add focus class', function (done) {
-      bsCustomFileInput.init()
-
-      input.addEventListener('focusin', function () {
-        assert.ok(input.classList.contains('focus'))
-        done()
-      })
-
-      input.dispatchEvent(new Event('focusin'))
-    })
-  })
-
-  describe('util - handleFocusout', function () {
-    it('should remove focus class', function (done) {
-      bsCustomFileInput.init()
-
-      input.addEventListener('focusout', function () {
-        assert.ok(!input.classList.contains('focus'))
-        done()
-      })
-
-      input.dispatchEvent(new Event('focusin'))
-      input.dispatchEvent(new Event('focusout'))
     })
   })
 })
