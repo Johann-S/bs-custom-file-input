@@ -1,0 +1,20 @@
+{
+  "env": {
+    "mocha": true,
+    "browser": true,
+    "es6": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "script"
+  },
+  "extends": "../.eslintrc.json",
+  "globals": {
+    "bsCustomFileInput": "off",
+    "expect": "off",
+    "sinon": "off"
+  },
+  "rules": {
+    "no-var": "off"
+  }
+}

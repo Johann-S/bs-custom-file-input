@@ -1,6 +1,3 @@
-/* eslint-env mocha, browser */
-/* global bsCustomFileInput: false, expect: false, sinon: false */
-
 var mochaDiv
 
 document.addEventListener('DOMContentLoaded', function() {
