@@ -24,6 +24,10 @@ if (buildTest) {
 if (buildProd) {
   fileDest = './dist/bs-custom-file-input.min.js'
   plugins.push(uglify({
+    compress: {
+      typeofs: false,
+    },
+    mangle: true,
     output: {
       comments: /^!/,
     },
