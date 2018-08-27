@@ -1,4 +1,5 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "es6": true
@@ -13,6 +14,7 @@
     "linebreak-style": ["error", "unix"],
     "no-tabs": "error",
     "no-trailing-spaces": "error",
+    "no-var": "error",
     "semi": ["error", "never"],
     "sort-imports": "error"
   }
