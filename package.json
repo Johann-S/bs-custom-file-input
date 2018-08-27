@@ -16,7 +16,8 @@
     "test": "npm run js-lint && npm run js-test && npm run coveralls",
     "js-lint": "eslint ./src ./tests",
     "js-test": "karma start karma.conf.js",
-    "coveralls": "shx cat tests/coverage/lcov.info | coveralls"
+    "coveralls": "shx cat tests/coverage/lcov.info | coveralls",
+    "browserstack": "cross-env browser=true karma start karma.conf.js"
   },
   "files": [
     "dist/*.{js,map}"
@@ -40,10 +41,12 @@
     "babel-plugin-istanbul": "^5.0.1",
     "bootstrap": "^4.1.3",
     "chai": "^4.1.2",
+    "core-js": "^2.5.7",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
     "eslint": "^5.4.0",
     "karma": "^3.0.0",
+    "karma-browserstack-launcher": "^1.3.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage-istanbul-reporter": "^2.0.2",

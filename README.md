@@ -5,6 +5,7 @@
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input?type=dev)
 [![Build Status](https://img.shields.io/travis/Johann-S/bs-custom-file-input/master.svg)](https://travis-ci.org/Johann-S/bs-custom-file-input)
 ![Coveralls github branch](https://img.shields.io/coveralls/github/Johann-S/bs-custom-file-input/master.svg)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=L1Z6cllmR0pVVUZBRmxTaGtEcm1QamUxdTZoQmRLeUFvWVlOcW5iODNVWT0tLUZTVWRKUzc4T05xSmhlZlJObVRKNEE9PQ==--177788f5ac0c50dcd3dd3eed31e39662d5612e7f)](https://www.browserstack.com/automate/public-build/L1Z6cllmR0pVVUZBRmxTaGtEcm1QamUxdTZoQmRLeUFvWVlOcW5iODNVWT0tLUZTVWRKUzc4T05xSmhlZlJObVRKNEE9PQ==--177788f5ac0c50dcd3dd3eed31e39662d5612e7f)
 
 A little plugin which makes Bootstrap 4 custom file input dynamic with no dependencies.
 
@@ -66,6 +67,12 @@ Removes this plugin from your Bootstrap custom file input and restore them at th
 ## Support me
 
 If you want to thank me, you can support me and become my [Patreon](https://www.patreon.com/jservoire) :wink:
+
+## Thanks
+
+[<img src="https://www.browserstack.com/images/mail/browserstack-logo-footer.png" width="120">](https://www.browserstack.com/)
+
+Thank you to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers.
 
 ## License
 
