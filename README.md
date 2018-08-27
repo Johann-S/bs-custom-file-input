@@ -63,6 +63,10 @@ Finds your Bootstrap custom file input and will make them dynamic.
 
 Removes this plugin from your Bootstrap custom file input and restore them at their first initial state
 
+## Support me
+
+If you want to thank me, you can support me and become my [Patreon](https://www.patreon.com/jservoire) :wink:
+
 ## License
 
 [MIT](https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
