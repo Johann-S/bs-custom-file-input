@@ -1,12 +1,3 @@
-var mochaDiv
-
-document.addEventListener('DOMContentLoaded', function() {
-  mochaDiv = document.createElement('div')
-  mochaDiv.setAttribute('id', 'mocha')
-
-  document.body.appendChild(mochaDiv)
-})
-
 var customInputFile = [
   '<div class="custom-file">',
   '  <input type="file" class="custom-file-input">',
@@ -14,9 +5,14 @@ var customInputFile = [
   '</div>',
 ].join('')
 
+var mochaDiv = document.createElement('div')
+mochaDiv.setAttribute('id', 'mocha')
+
+document.body.appendChild(mochaDiv)
+
 describe('bsCustomInputFile', function () {
-  var mochaDiv
   var input
+  var mochaDiv
 
   before(function () {
     mochaDiv = document.getElementById('mocha')
