@@ -5,26 +5,26 @@ var customInputFile = [
   '</div>',
 ].join('')
 
-var mochaDiv = document.createElement('div')
-mochaDiv.setAttribute('id', 'mocha')
 
-document.body.appendChild(mochaDiv)
+var mochaFixtureDiv = document.createElement('div')
+mochaFixtureDiv.setAttribute('id', 'mocha-fixture')
+document.body.appendChild(mochaFixtureDiv)
 
 describe('bsCustomInputFile', function () {
   var input
-  var mochaDiv
+  var mochaFixtureDiv
 
   before(function () {
-    mochaDiv = document.getElementById('mocha')
+    mochaFixtureDiv = document.getElementById('mocha-fixture')
   })
 
   beforeEach(function() {
-    mochaDiv.innerHTML = customInputFile
+    mochaFixtureDiv.innerHTML = customInputFile
     input = document.querySelector('input')
   })
 
   afterEach(function () {
-    mochaDiv.innerHTML = ''
+    mochaFixtureDiv.innerHTML = ''
   })
 
   describe('init', function () {
@@ -54,7 +54,7 @@ describe('bsCustomInputFile', function () {
       var form = document.createElement('form')
       form.innerHTML = customInputFile
 
-      mochaDiv.appendChild(form)
+      mochaFixtureDiv.appendChild(form)
 
       var spy = sinon.spy(form, 'addEventListener')
 
@@ -80,7 +80,7 @@ describe('bsCustomInputFile', function () {
         '</div>',
       ].join('')
 
-      mochaDiv.appendChild(form)
+      mochaFixtureDiv.appendChild(form)
 
       var spy = sinon.spy(form, 'removeEventListener')
 
@@ -131,7 +131,7 @@ describe('bsCustomInputFile', function () {
     })
 
     it('should do nothing if the input file has no label element', function (done) {
-      mochaDiv.innerHTML = [
+      mochaFixtureDiv.innerHTML = [
         '<div class="custom-file">',
         '  <input type="file" class="custom-file-input">',
         '</div>',
@@ -157,8 +157,8 @@ describe('bsCustomInputFile', function () {
       form = document.createElement('form')
       form.innerHTML = customInputFile
 
-      mochaDiv.innerHTML = ''
-      mochaDiv.appendChild(form)
+      mochaFixtureDiv.innerHTML = ''
+      mochaFixtureDiv.appendChild(form)
 
       input = document.querySelector('input')
     })
