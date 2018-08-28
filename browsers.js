@@ -57,20 +57,20 @@ const browsers = {
     browser: 'IE',
     browser_version: '10.0',
   },
-  /*iphoneXIos: {
+  /*iphoneX: {
     base: 'BrowserStack',
     os: 'ios',
     os_version: '11.0',
-    device: 'iPhone X',
+    device: 'iPhone 6S',
     real_mobile: true,
-  },
+  },*/
   pixel2: {
     base: 'BrowserStack',
     os: 'android',
     os_version: '8.0',
-    device: 'Pixel 2',
+    device: 'Google Pixel 2',
     real_mobile: true,
-  },*/
+  },
 }
 
 const browsersKeys = Object.keys(browsers)
