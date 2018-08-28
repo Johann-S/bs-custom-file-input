@@ -38,14 +38,6 @@ module.exports = function(config) {
       retryLimit: 2,
     }
 
-    // Compatibility for old browsers
-    conf.files.unshift({
-      pattern: path.resolve('./node_modules/core-js/client/shim.min.js'),
-      included: true,
-      served: true,
-      watched: false,
-    })
-
     conf.customLaunchers = browsers
     conf.browsers = browsersKeys
     conf.reporters.push('BrowserStack')
