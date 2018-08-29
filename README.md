@@ -5,6 +5,7 @@
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input?type=dev)
 [![Build Status](https://img.shields.io/travis/Johann-S/bs-custom-file-input/master.svg)](https://travis-ci.org/Johann-S/bs-custom-file-input)
 ![Coveralls github branch](https://img.shields.io/coveralls/github/Johann-S/bs-custom-file-input/master.svg)
+[![JS gzip size](https://img.badgesize.io/Johann-S/bs-custom-file-input/master/dist/bs-custom-file-input.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/Johann-S/bs-custom-file-input/tree/master/dist/bs-custom-file-input.min.js)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=L1Z6cllmR0pVVUZBRmxTaGtEcm1QamUxdTZoQmRLeUFvWVlOcW5iODNVWT0tLUZTVWRKUzc4T05xSmhlZlJObVRKNEE9PQ==--177788f5ac0c50dcd3dd3eed31e39662d5612e7f)](https://www.browserstack.com/automate/public-build/L1Z6cllmR0pVVUZBRmxTaGtEcm1QamUxdTZoQmRLeUFvWVlOcW5iODNVWT0tLUZTVWRKUzc4T05xSmhlZlJObVRKNEE9PQ==--177788f5ac0c50dcd3dd3eed31e39662d5612e7f)
 
 A little plugin which makes Bootstrap 4 custom file input dynamic with no dependencies.
@@ -17,6 +18,16 @@ Features:
 - Display file names for `multiple` input
 - Reset your custom file input to its initial state
 - Small, only **2kb** and less if you gzip it
+
+## Table of contents
+
+- [Install](#install)
+- [How to use it](#how-to-use-it)
+- [Methods](#methods)
+- [Compatibility](#compatibility)
+- [Support me](#support-me)
+- [Thanks](#thanks)
+- [License](#license)
 
 ## Install
 
@@ -64,9 +75,22 @@ Finds your Bootstrap custom file input and will make them dynamic.
 
 Removes this plugin from your Bootstrap custom file input and restore them at their first initial state
 
+## Compatibility
+
+bsCustomFileInput is compatible with :
+
+- IE10+
+- Edge
+- Firefox
+- Chrome
+- Safari
+- Chrome Android
+
+You can find our BrowserStack list of browsers [here](https://github.com/Johann-S/bs-custom-file-input/blob/master/browsers.js).
+
 ## Support me
 
-If you want to thank me, you can support me and become my [Patreon](https://www.patreon.com/jservoire) :wink:
+If you want to thank me, you can support me and become my [Patron](https://www.patreon.com/jservoire) :wink:
 
 ## Thanks
 
