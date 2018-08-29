@@ -75,8 +75,16 @@ Finds your Bootstrap custom file input and will make them dynamic.
 
 #### Parameters
 
-- inputSelector (*default value*: `.custom-file input[type="file"]`, *type*: `string`): You can pass a custom input selector, but be sure to pass a **file input selector**
-- formSelector (*default value*: `form`, *type*: `string`): Allow you to pass a custom form selector, but be sure to pass a **form selector**
+- inputSelector
+  - *default value*: `.custom-file input[type="file"]`
+  - *type*: `string`
+
+  You can pass a custom input selector, but be sure to pass a **file input selector**
+- formSelector
+  - *default value*: `form`
+  - *type*: `string`
+
+  Allows you to pass a custom form selector, but be sure to pass a **form selector**
 
 ### destroy
 
