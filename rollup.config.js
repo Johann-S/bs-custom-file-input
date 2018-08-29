@@ -9,21 +9,43 @@ const year = new Date().getFullYear()
 
 const buildProd = process.env.PROD === 'true'
 const buildTest = process.env.TEST === 'true'
-let fileDest = './dist/bs-custom-file-input.js'
+const buildDev = process.env.DEV === 'true'
 
-const plugins = [
-  babel({
-    exclude: 'node_modules/**',
-  }),
-]
+const conf = {
+  input: './src/index.js',
+  output: {
+    banner:
+`/*!
+ * BsCustomFileInput v${pkg.version} (${pkg.homepage})
+ * Copyright ${year} ${pkg.author}
+ * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
+ */`,
+    file: './dist/bs-custom-file-input.js',
+    format: 'umd',
+    name: 'bsCustomFileInput',
+    sourcemap: true,
+  },
+  plugins: [
+    babel({
+      exclude: 'node_modules/**',
+    }),
+  ],
+}
 
 if (buildTest) {
-  fileDest = './tests/coverage/bs-custom-file-input.js'
+  conf.output.file = './tests/coverage/bs-custom-file-input.js'
+}
+
+if (buildDev) {
+  conf.output.file = './tests/coverage/bs-custom-file-input.js'
+  conf.watch = {
+    include: 'src/**.js',
+  }
 }
 
 if (buildProd) {
-  fileDest = './dist/bs-custom-file-input.min.js'
-  plugins.push(uglify({
+  conf.output.file = './dist/bs-custom-file-input.min.js'
+  conf.plugins.push(uglify({
     compress: {
       typeofs: false,
     },
@@ -34,22 +56,4 @@ if (buildProd) {
   }))
 }
 
-module.exports = {
-  input: './src/index.js',
-  output: {
-    banner:
-`/*!
- * BsCustomFileInput v${pkg.version} (${pkg.homepage})
- * Copyright ${year} ${pkg.author}
- * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
- */`,
-    file: fileDest,
-    format: 'umd',
-    name: 'bsCustomFileInput',
-    sourcemap: true,
-  },
-  watch: {
-    include: 'src/**.js',
-  },
-  plugins,
-}
+module.exports = conf
