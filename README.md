@@ -17,6 +17,8 @@ Features:
 - Display file name
 - Display file names for `multiple` input
 - Reset your custom file input to its initial state
+- Handle form reset
+- Allow custom selectors for input, and form
 - Small, only **2kb** and less if you gzip it
 
 ## Table of contents
@@ -70,6 +72,11 @@ This library is UMD ready so you can use it everywhere.
 ### init
 
 Finds your Bootstrap custom file input and will make them dynamic.
+
+#### Parameters
+
+- inputSelector (*default value*: `.custom-file input[type="file"]`, *type*: `string`): You can pass a custom input selector, but be sure to pass a **file input selector**
+- formSelector (*default value*: `form`, *type*: `string`): Allow you to pass a custom form selector, but be sure to pass a **form selector**
 
 ### destroy
 
