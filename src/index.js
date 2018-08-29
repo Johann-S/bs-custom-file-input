@@ -15,9 +15,15 @@ const Event = {
 const customProperty = 'bsCustomFileInput'
 
 const bsCustomFileInput = {
-  init() {
-    const customFileInputList = [].slice.call(document.querySelectorAll(Selector.CUSTOMFILE))
-    const formList = [].slice.call(document.querySelectorAll(Selector.FORM))
+  customInputSelector: null,
+  customFormSelector: null,
+
+  init(inputSelector = Selector.CUSTOMFILE, formSelector = Selector.FORM) {
+    this.customInputSelector = inputSelector
+    this.customFormSelector = formSelector
+
+    const customFileInputList = [].slice.call(document.querySelectorAll(this.customInputSelector))
+    const formList = [].slice.call(document.querySelectorAll(this.customFormSelector))
 
     for (let i = 0, len = customFileInputList.length; i < len; i++) {
       const input = customFileInputList[i]
@@ -38,8 +44,8 @@ const bsCustomFileInput = {
   },
 
   destroy() {
-    const formList = [].slice.call(document.querySelectorAll(Selector.FORM))
-    const customFileInputList = [].slice.call(document.querySelectorAll(Selector.CUSTOMFILE))
+    const formList = [].slice.call(document.querySelectorAll(this.customFormSelector))
+    const customFileInputList = [].slice.call(document.querySelectorAll(this.customInputSelector))
       .filter((input) => !!input.bsCustomFileInput)
 
     for (let i = 0, len = customFileInputList.length; i < len; i++) {

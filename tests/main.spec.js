@@ -31,7 +31,7 @@ describe('bsCustomInputFile', function () {
     it('should add bsCustomFileInput property', function () {
       bsCustomFileInput.init()
 
-      expect(input.bsCustomFileInput).to.not.undefined
+      expect(input.bsCustomFileInput).not.undefined
     })
 
     it('should store default text', function () {
@@ -61,6 +61,28 @@ describe('bsCustomInputFile', function () {
       bsCustomFileInput.init()
 
       expect(spy.called).to.be.true
+    })
+
+    it('should store custom input selector and custom form selector', function () {
+      bsCustomFileInput.init('input', '.form')
+
+      expect(bsCustomFileInput.customInputSelector).equal('input')
+      expect(bsCustomFileInput.customFormSelector).equal('.form')
+    })
+
+    it('should select only my custom input selector', function () {
+      mochaFixtureDiv.innerHTML = [
+        '<input type="file" id="test" />',
+        customInputFile,
+      ].join('')
+
+      bsCustomFileInput.init('#test')
+
+      var testInput = document.getElementById('test')
+      var otherInput = document.querySelector('.custom-file input[type="file"]')
+
+      expect(testInput.bsCustomFileInput).not.undefined
+      expect(otherInput.bsCustomFileInput).undefined
     })
   })
 
