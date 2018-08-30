@@ -100,6 +100,7 @@ bsCustomFileInput is compatible with :
 - Chrome
 - Safari
 - Chrome Android
+- Safari iOS
 
 You can find our BrowserStack list of browsers [here](https://github.com/Johann-S/bs-custom-file-input/blob/master/browsers.js).
 

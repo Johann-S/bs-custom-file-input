@@ -57,13 +57,13 @@ const browsers = {
     browser: 'IE',
     browser_version: '10.0',
   },
-  /*iphoneX: {
+  iphoneX: {
     base: 'BrowserStack',
     os: 'ios',
     os_version: '11.0',
-    device: 'iPhone 6S',
+    device: 'iPhone X',
     real_mobile: true,
-  },*/
+  },
   pixel2: {
     base: 'BrowserStack',
     os: 'android',
