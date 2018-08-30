@@ -17,7 +17,7 @@
     "prejs-test": "cross-env NODE_ENV=test rollup -c --environment TEST",
     "js-test": "karma start karma.conf.js",
     "coveralls": "shx cat tests/coverage/lcov.info | coveralls",
-    "browserstack": "cross-env browser=true karma start karma.conf.js"
+    "browserstack": "npm run build && cross-env browser=true karma start karma.conf.js"
   },
   "files": [
     "dist/*.{js,map}"

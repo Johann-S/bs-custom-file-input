@@ -31,6 +31,7 @@ module.exports = function(config) {
   }
 
   if (browserTest) {
+    conf.files[0] = 'dist/bs-custom-file-input.min.js'
     conf.hostname = ip.address()
     conf.browserStack = {
       username: process.env.BROWSER_STACK_USERNAME,
