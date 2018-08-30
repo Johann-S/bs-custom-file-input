@@ -10,14 +10,15 @@
     "node": ">=8"
   },
   "scripts": {
-    "dev": "rollup --environment DEV -c -w",
     "build": "rollup -c && rollup -c --environment PROD",
-    "test": "npm run js-lint && npm run js-test",
+    "browserstack": "npm run build && cross-env browser=true karma start karma.conf.js",
+    "coveralls": "shx cat tests/coverage/lcov.info | coveralls",
+    "dev": "rollup --environment DEV -c -w",
     "js-lint": "eslint ./src ./tests",
     "prejs-test": "cross-env NODE_ENV=test rollup -c --environment TEST",
     "js-test": "karma start karma.conf.js",
-    "coveralls": "shx cat tests/coverage/lcov.info | coveralls",
-    "browserstack": "npm run build && cross-env browser=true karma start karma.conf.js"
+    "release": "npm run build && standard-version",
+    "test": "npm run js-lint && npm run js-test"
   },
   "files": [
     "dist/*.{js,map}"
@@ -57,7 +58,8 @@
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-uglify": "^4.0.0",
     "shx": "^0.3.2",
-    "sinon": "^6.1.5"
+    "sinon": "^6.1.5",
+    "standard-version": "^4.4.0"
   },
   "dependencies": {}
 }
