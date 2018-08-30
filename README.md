@@ -19,6 +19,7 @@ Features:
 - Reset your custom file input to its initial state
 - Handle form reset
 - Allow custom selectors for input, and form
+- Allow to drag and drop files
 - Small, only **2kb** and less if you gzip it
 
 ## Table of contents
@@ -66,6 +67,26 @@ import bsCustomFileInput from 'bs-custom-file-input'
 For more examples check out [this file](https://github.com/Johann-S/bs-custom-file-input/blob/master/tests/index.html).
 
 This library is UMD ready so you can use it everywhere.
+
+## Properties
+
+### config
+
+This property will allow you to enable/disable some features
+
+- *dragFile*
+  - *default value*: `true`
+  - *type*: `boolean`
+
+Allows to enable or disable drag and dropping files
+
+### customFormSelector
+
+This property stores the form selector used
+
+### customInputSelector
+
+This property store the custom input selector used
 
 ## Methods
 

@@ -1,22 +1,31 @@
 import { getDefaultText, restoreDefaultText } from './util'
 import {
+  handleDragOver,
+  handleDrop,
   handleFormReset,
   handleInputChange,
 } from './eventHandlers'
 import Selector from './selector'
 
 const Event = {
+  DRAGOVER      : 'dragover',
+  DROP          : 'drop',
+  FORMRESET     : 'reset',
   INPUTCHANGE   : 'change',
   INPUTFOCUSIN  : 'focusin',
   INPUTFOCUSOUT : 'focusout',
-  FORMRESET     : 'reset',
 }
 
 const customProperty = 'bsCustomFileInput'
 
+const config = {
+  dragFile: true,
+}
+
 const bsCustomFileInput = {
-  customInputSelector: null,
+  config,
   customFormSelector: null,
+  customInputSelector: null,
 
   init(inputSelector = Selector.CUSTOMFILE, formSelector = Selector.FORM) {
     this.customInputSelector = inputSelector
@@ -36,6 +45,11 @@ const bsCustomFileInput = {
       })
 
       input.addEventListener(Event.INPUTCHANGE, handleInputChange)
+
+      if (this.config.dragFile) {
+        input.addEventListener(Event.DRAGOVER, handleDragOver)
+        input.addEventListener(Event.DROP, handleDrop)
+      }
     }
 
     for (let i = 0, len = formList.length; i < len; i++) {

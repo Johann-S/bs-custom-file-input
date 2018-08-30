@@ -30,7 +30,28 @@ function handleFormReset() {
   }
 }
 
+function handleDrop(event) {
+  event.preventDefault()
+
+  const label = this.parentNode.querySelector(Selector.CUSTOMFILELABEL)
+
+  if (label) {
+    const fileNamesList = [].slice.call(event.dataTransfer.files)
+      .map((file) => file.name)
+
+    label.innerHTML = this.hasAttribute('multiple')
+      ? fileNamesList.join(', ')
+      : fileNamesList[0]
+  }
+}
+
+function handleDragOver(event) {
+  event.preventDefault()
+}
+
 export {
+  handleDragOver,
+  handleDrop,
   handleInputChange,
   handleFormReset,
 }

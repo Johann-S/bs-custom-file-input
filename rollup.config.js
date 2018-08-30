@@ -16,7 +16,7 @@ const conf = {
   output: {
     banner:
 `/*!
- * BsCustomFileInput v${pkg.version} (${pkg.homepage})
+ * bsCustomFileInput v${pkg.version} (${pkg.homepage})
  * Copyright ${year} ${pkg.author}
  * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
  */`,

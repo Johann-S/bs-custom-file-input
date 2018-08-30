@@ -1,4 +1,8 @@
 (function () {
+  var mochaFixtureDiv = document.createElement('div')
+  mochaFixtureDiv.setAttribute('id', 'mocha-fixture')
+  document.body.appendChild(mochaFixtureDiv)
+
   // Polyfill new File()
   try {
     new File([], 'test.txt')
