@@ -6,24 +6,24 @@ import {
 import Selector from './selector'
 
 const Event = {
+  FORMRESET     : 'reset',
   INPUTCHANGE   : 'change',
   INPUTFOCUSIN  : 'focusin',
   INPUTFOCUSOUT : 'focusout',
-  FORMRESET     : 'reset',
 }
 
 const customProperty = 'bsCustomFileInput'
 
+let customFormSelector = null
+let customInputSelector = null
+
 const bsCustomFileInput = {
-  customInputSelector: null,
-  customFormSelector: null,
-
   init(inputSelector = Selector.CUSTOMFILE, formSelector = Selector.FORM) {
-    this.customInputSelector = inputSelector
-    this.customFormSelector = formSelector
+    customInputSelector = inputSelector
+    customFormSelector = formSelector
 
-    const customFileInputList = [].slice.call(document.querySelectorAll(this.customInputSelector))
-    const formList = [].slice.call(document.querySelectorAll(this.customFormSelector))
+    const customFileInputList = [].slice.call(document.querySelectorAll(customInputSelector))
+    const formList = [].slice.call(document.querySelectorAll(customFormSelector))
 
     for (let i = 0, len = customFileInputList.length; i < len; i++) {
       const input = customFileInputList[i]
@@ -44,8 +44,8 @@ const bsCustomFileInput = {
   },
 
   destroy() {
-    const formList = [].slice.call(document.querySelectorAll(this.customFormSelector))
-    const customFileInputList = [].slice.call(document.querySelectorAll(this.customInputSelector))
+    const formList = [].slice.call(document.querySelectorAll(customFormSelector))
+    const customFileInputList = [].slice.call(document.querySelectorAll(customInputSelector))
       .filter((input) => !!input.bsCustomFileInput)
 
     for (let i = 0, len = customFileInputList.length; i < len; i++) {

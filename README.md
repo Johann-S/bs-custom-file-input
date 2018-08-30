@@ -19,6 +19,7 @@ Features:
 - Reset your custom file input to its initial state
 - Handle form reset
 - Allow custom selectors for input, and form
+- Allow to drag and drop files
 - Small, only **2kb** and less if you gzip it
 
 ## Table of contents
