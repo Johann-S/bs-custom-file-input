@@ -1,11 +1,12 @@
 /* eslint-env node */
 const path = require('path')
-const coveragePath = path.resolve(__dirname, 'tests/coverage')
+const ip = require('ip')
 const {
   browsers,
   browsersKeys,
 } = require('./browsers')
 
+const coveragePath = path.resolve(__dirname, 'tests/coverage')
 const browserTest = process.env.browser === 'true'
 
 module.exports = function(config) {
@@ -30,6 +31,7 @@ module.exports = function(config) {
   }
 
   if (browserTest) {
+    conf.hostname = ip.address()
     conf.browserStack = {
       username: process.env.BROWSER_STACK_USERNAME,
       accessKey: process.env.BROWSER_STACK_ACCESS_KEY,
