@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "A little plugin for Bootstrap 4 custom file input",
   "main": "dist/bs-custom-file-input.js",
+  "types": "bs-custom-file-input.d.ts",
   "bugs": {
     "url": "https://github.com/Johann-S/bs-custom-file-input/issues"
   },
@@ -21,12 +22,16 @@
     "test": "npm run js-lint && npm run js-test"
   },
   "files": [
-    "dist/*.{js,map}"
+    "dist/*.{js,map}",
+    "bs-custom-file-input.d.ts"
   ],
   "keywords": [
     "bootstrap",
     "bootstrap 4",
-    "custom file input"
+    "custom file input",
+    "vanillajs",
+    "react",
+    "angular"
   ],
   "author": "Johann-S <johann.servoire@gmail.com>",
   "homepage": "https://github.com/Johann-S/bs-custom-file-input",
@@ -35,6 +40,7 @@
     "url": "git+https://github.com/Johann-S/bs-custom-file-input.git"
   },
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
@@ -60,6 +66,5 @@
     "shx": "^0.3.2",
     "sinon": "^6.1.5",
     "standard-version": "^4.4.0"
-  },
-  "dependencies": {}
+  }
 }
