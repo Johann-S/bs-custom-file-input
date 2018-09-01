@@ -10,16 +10,19 @@
 
 A little plugin which makes Bootstrap 4 custom file input dynamic with no dependencies.
 
+You can use it on [React](https://stackblitz.com/edit/bs-custom-file-input-react) and Angular too because this plugin is written with the most used JavaScript framework: [VanillaJS](http://vanilla-js.com/).
+
 Features:
 
 - Works with Bootstrap 4
-- Works without *dependencies*
+- Works without *dependencies* and jQuery
 - Display file name
 - Display file names for `multiple` input
 - Reset your custom file input to its initial state
 - Handle form reset
 - Allow custom selectors for input, and form
 - Allow to drag and drop files
+- Built in UMD to be used everywhere
 - Small, only **2kb** and less if you gzip it
 
 ## Table of contents
