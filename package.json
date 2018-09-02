@@ -43,6 +43,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-plugin-istanbul": "^5.0.1",
