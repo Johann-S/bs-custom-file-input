@@ -6,17 +6,18 @@ const {
   browsersKeys,
 } = require('./browsers')
 
-const coveragePath = path.resolve(__dirname, 'tests/coverage')
+const coveragePath = path.resolve(__dirname, 'coverage')
 const browserTest = process.env.browser === 'true'
 
 module.exports = function(config) {
   const conf = {
+    basePath: '../',
     frameworks: ['chai', 'mocha', 'sinon'],
     files: [
       'tests/coverage/bs-custom-file-input.js',
       'tests/polyfill.js',
-      'tests/index.spec.js',
-      'tests/util.spec.js',
+      'tests/units/index.spec.js',
+      'tests/units/util.spec.js',
     ],
     exclude: [
       'tests/*.html',
