@@ -12,12 +12,12 @@
   },
   "scripts": {
     "build": "rollup -c && rollup -c --environment PROD",
-    "browserstack": "npm run build && cross-env browser=true karma start karma.conf.js",
+    "browserstack": "npm run build && cross-env browser=true karma start tests/karma.conf.js",
     "coveralls": "shx cat tests/coverage/lcov.info | coveralls",
     "dev": "rollup --environment DEV -c -w",
     "js-lint": "eslint ./src ./tests",
     "prejs-test": "cross-env NODE_ENV=test rollup -c --environment TEST",
-    "js-test": "karma start karma.conf.js",
+    "js-test": "karma start tests/karma.conf.js",
     "release": "npm run build && standard-version",
     "test": "npm run js-lint && npm run js-test"
   },
