@@ -2,6 +2,10 @@
   "name": "bs-custom-file-input",
   "version": "1.0.2",
   "description": "A little plugin for Bootstrap 4 custom file input",
+  "author": "Johann-S <johann.servoire@gmail.com>",
+  "contributors": [
+    "XhmikosR <xhmikosr@gmail.com>"
+  ],
   "main": "dist/bs-custom-file-input.js",
   "types": "bs-custom-file-input.d.ts",
   "bugs": {
@@ -33,7 +37,6 @@
     "react",
     "angular"
   ],
-  "author": "Johann-S <johann.servoire@gmail.com>",
   "homepage": "https://github.com/Johann-S/bs-custom-file-input",
   "repository": {
     "type": "git",
