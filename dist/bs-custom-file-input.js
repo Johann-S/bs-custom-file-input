@@ -1,5 +1,5 @@
 /*!
- * BsCustomFileInput v1.0.2 (https://github.com/Johann-S/bs-custom-file-input)
+ * bsCustomFileInput v1.1.0 (https://github.com/Johann-S/bs-custom-file-input)
  * Copyright 2018 Johann-S <johann.servoire@gmail.com>
  * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
  */
@@ -65,16 +65,28 @@
   }
 
   var Event = {
+    FORMRESET: 'reset',
     INPUTCHANGE: 'change',
     INPUTFOCUSIN: 'focusin',
-    INPUTFOCUSOUT: 'focusout',
-    FORMRESET: 'reset'
+    INPUTFOCUSOUT: 'focusout'
   };
   var customProperty = 'bsCustomFileInput';
+  var customFormSelector = null;
+  var customInputSelector = null;
   var bsCustomFileInput = {
-    init: function init() {
-      var customFileInputList = [].slice.call(document.querySelectorAll(Selector.CUSTOMFILE));
-      var formList = [].slice.call(document.querySelectorAll(Selector.FORM));
+    init: function init(inputSelector, formSelector) {
+      if (inputSelector === void 0) {
+        inputSelector = Selector.CUSTOMFILE;
+      }
+
+      if (formSelector === void 0) {
+        formSelector = Selector.FORM;
+      }
+
+      customInputSelector = inputSelector;
+      customFormSelector = formSelector;
+      var customFileInputList = [].slice.call(document.querySelectorAll(customInputSelector));
+      var formList = [].slice.call(document.querySelectorAll(customFormSelector));
 
       for (var i = 0, len = customFileInputList.length; i < len; i++) {
         var input = customFileInputList[i];
@@ -92,8 +104,8 @@
       }
     },
     destroy: function destroy() {
-      var formList = [].slice.call(document.querySelectorAll(Selector.FORM));
-      var customFileInputList = [].slice.call(document.querySelectorAll(Selector.CUSTOMFILE)).filter(function (input) {
+      var formList = [].slice.call(document.querySelectorAll(customFormSelector));
+      var customFileInputList = [].slice.call(document.querySelectorAll(customInputSelector)).filter(function (input) {
         return !!input.bsCustomFileInput;
       });
 
