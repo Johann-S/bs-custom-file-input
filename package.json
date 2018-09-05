@@ -22,7 +22,7 @@
     "js-lint": "eslint ./src ./tests",
     "prejs-test": "cross-env NODE_ENV=test rollup -c --environment TEST",
     "js-test": "karma start tests/karma.conf.js",
-    "release": "npm run build && standard-version",
+    "release": "standard-version",
     "test": "npm run js-lint && npm run js-test"
   },
   "files": [
