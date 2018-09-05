@@ -1,8 +1,6 @@
-declare module 'bs-custom-file-input' {
-  interface bsCustomFileInput {
-    init(inputSelector?: string, formSelector?: string): void,
-    destroy(): void,
-  }
+declare const bsCustomFileInput: {
+  init(inputSelector?: string, formSelector?: string): void;
+  destroy(): void;
+};
 
-  export default bsCustomFileInput;
-}
+export default bsCustomFileInput;
