@@ -22,6 +22,7 @@ Features:
 - Handle form reset
 - Allow custom selectors for input, and form
 - Allow to drag and drop files
+- Allow you to change the default display with a child in the `<label>` element
 - Built in UMD to be used everywhere
 - Small, only **2kb** and less if you gzip it
 

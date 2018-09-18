@@ -1,5 +1,5 @@
+import { findFirstChildNode, restoreDefaultText } from './util'
 import Selector from './selector'
-import { restoreDefaultText } from './util'
 
 const fileApi = !!window.File
 
@@ -9,16 +9,17 @@ const getSelectedFiles = (input) => {
       .map((file) => file.name)
 
     return files.join(', ')
-  } else {
-    return input.value
   }
+
+  return input.value
 }
 
 function handleInputChange() {
   const label = this.parentNode.querySelector(Selector.CUSTOMFILELABEL)
 
   if (label) {
-    label.innerHTML = getSelectedFiles(this)
+    const element = findFirstChildNode(label)
+    element.innerHTML = getSelectedFiles(this)
   }
 }
 
