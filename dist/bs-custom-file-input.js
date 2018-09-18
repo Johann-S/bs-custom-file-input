@@ -1,5 +1,5 @@
 /*!
- * bsCustomFileInput v1.1.1 (https://github.com/Johann-S/bs-custom-file-input)
+ * bsCustomFileInput v1.2.0 (https://github.com/Johann-S/bs-custom-file-input)
  * Copyright 2018 Johann-S <johann.servoire@gmail.com>
  * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
  */
@@ -12,8 +12,11 @@
   var Selector = {
     CUSTOMFILE: '.custom-file input[type="file"]',
     CUSTOMFILELABEL: '.custom-file-label',
-    FORM: 'form'
+    FORM: 'form',
+    INPUT: 'input'
   };
+
+  var textNodeType = 3;
 
   var getDefaultText = function getDefaultText(input) {
     var defaultText = '';
@@ -26,12 +29,29 @@
     return defaultText;
   };
 
+  var findFirstChildNode = function findFirstChildNode(element) {
+    if (element.childNodes.length > 0) {
+      var childNodes = [].slice.call(element.childNodes);
+
+      for (var i = 0; i < childNodes.length; i++) {
+        var node = childNodes[i];
+
+        if (node.nodeType !== textNodeType) {
+          return node;
+        }
+      }
+    }
+
+    return element;
+  };
+
   var restoreDefaultText = function restoreDefaultText(input) {
     var defaultText = input.bsCustomFileInput.defaultText;
     var label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL);
 
     if (label) {
-      label.innerHTML = defaultText;
+      var element = findFirstChildNode(label);
+      element.innerHTML = defaultText;
     }
   };
 
@@ -43,36 +63,35 @@
         return file.name;
       });
       return files.join(', ');
-    } else {
-      return input.value;
     }
+
+    return input.value;
   };
 
   function handleInputChange() {
     var label = this.parentNode.querySelector(Selector.CUSTOMFILELABEL);
 
     if (label) {
-      label.innerHTML = getSelectedFiles(this);
+      var element = findFirstChildNode(label);
+      element.innerHTML = getSelectedFiles(this);
     }
   }
 
   function handleFormReset() {
-    var customFileList = [].slice.call(this.querySelectorAll(Selector.CUSTOMFILE));
+    var customFileList = [].slice.call(this.querySelectorAll(Selector.INPUT)).filter(function (input) {
+      return !!input.bsCustomFileInput;
+    });
 
     for (var i = 0, len = customFileList.length; i < len; i++) {
       restoreDefaultText(customFileList[i]);
     }
   }
 
+  var customProperty = 'bsCustomFileInput';
   var Event = {
     FORMRESET: 'reset',
-    INPUTCHANGE: 'change',
-    INPUTFOCUSIN: 'focusin',
-    INPUTFOCUSOUT: 'focusout'
+    INPUTCHANGE: 'change'
   };
-  var customProperty = 'bsCustomFileInput';
-  var customFormSelector = null;
-  var customInputSelector = null;
   var bsCustomFileInput = {
     init: function init(inputSelector, formSelector) {
       if (inputSelector === void 0) {
@@ -83,10 +102,8 @@
         formSelector = Selector.FORM;
       }
 
-      customInputSelector = inputSelector;
-      customFormSelector = formSelector;
-      var customFileInputList = [].slice.call(document.querySelectorAll(customInputSelector));
-      var formList = [].slice.call(document.querySelectorAll(customFormSelector));
+      var customFileInputList = [].slice.call(document.querySelectorAll(inputSelector));
+      var formList = [].slice.call(document.querySelectorAll(formSelector));
 
       for (var i = 0, len = customFileInputList.length; i < len; i++) {
         var input = customFileInputList[i];
@@ -101,11 +118,18 @@
 
       for (var _i = 0, _len = formList.length; _i < _len; _i++) {
         formList[_i].addEventListener(Event.FORMRESET, handleFormReset);
+
+        Object.defineProperty(formList[_i], customProperty, {
+          value: true,
+          writable: true
+        });
       }
     },
     destroy: function destroy() {
-      var formList = [].slice.call(document.querySelectorAll(customFormSelector));
-      var customFileInputList = [].slice.call(document.querySelectorAll(customInputSelector)).filter(function (input) {
+      var formList = [].slice.call(document.querySelectorAll(Selector.FORM)).filter(function (form) {
+        return !!form.bsCustomFileInput;
+      });
+      var customFileInputList = [].slice.call(document.querySelectorAll(Selector.INPUT)).filter(function (input) {
         return !!input.bsCustomFileInput;
       });
 
@@ -118,6 +142,8 @@
 
       for (var _i2 = 0, _len2 = formList.length; _i2 < _len2; _i2++) {
         formList[_i2].removeEventListener(Event.FORMRESET, handleFormReset);
+
+        formList[_i2][customProperty] = undefined;
       }
     }
   };
