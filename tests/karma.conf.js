@@ -17,7 +17,7 @@ module.exports = function(config) {
       'tests/coverage/bs-custom-file-input.js',
       'tests/polyfill.js',
       'tests/units/index.spec.js',
-      'tests/units/util.spec.js',
+      'tests/units/eventHandlers.spec.js',
     ],
     exclude: [
       'tests/*.html',
