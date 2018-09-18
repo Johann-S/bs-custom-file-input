@@ -1,29 +1,17 @@
 import { getDefaultText, restoreDefaultText } from './util'
-import {
-  handleFormReset,
-  handleInputChange,
-} from './eventHandlers'
+import { handleFormReset, handleInputChange } from './eventHandlers'
 import Selector from './selector'
 
-const Event = {
-  FORMRESET     : 'reset',
-  INPUTCHANGE   : 'change',
-  INPUTFOCUSIN  : 'focusin',
-  INPUTFOCUSOUT : 'focusout',
-}
-
 const customProperty = 'bsCustomFileInput'
-
-let customFormSelector = null
-let customInputSelector = null
+const Event = {
+  FORMRESET   : 'reset',
+  INPUTCHANGE : 'change',
+}
 
 const bsCustomFileInput = {
   init(inputSelector = Selector.CUSTOMFILE, formSelector = Selector.FORM) {
-    customInputSelector = inputSelector
-    customFormSelector = formSelector
-
-    const customFileInputList = [].slice.call(document.querySelectorAll(customInputSelector))
-    const formList = [].slice.call(document.querySelectorAll(customFormSelector))
+    const customFileInputList = [].slice.call(document.querySelectorAll(inputSelector))
+    const formList = [].slice.call(document.querySelectorAll(formSelector))
 
     for (let i = 0, len = customFileInputList.length; i < len; i++) {
       const input = customFileInputList[i]
@@ -40,12 +28,17 @@ const bsCustomFileInput = {
 
     for (let i = 0, len = formList.length; i < len; i++) {
       formList[i].addEventListener(Event.FORMRESET, handleFormReset)
+      Object.defineProperty(formList[i], customProperty, {
+        value: true,
+        writable: true,
+      })
     }
   },
 
   destroy() {
-    const formList = [].slice.call(document.querySelectorAll(customFormSelector))
-    const customFileInputList = [].slice.call(document.querySelectorAll(customInputSelector))
+    const formList = [].slice.call(document.querySelectorAll(Selector.FORM))
+      .filter((form) => !!form.bsCustomFileInput)
+    const customFileInputList = [].slice.call(document.querySelectorAll(Selector.INPUT))
       .filter((input) => !!input.bsCustomFileInput)
 
     for (let i = 0, len = customFileInputList.length; i < len; i++) {
@@ -59,6 +52,7 @@ const bsCustomFileInput = {
 
     for (let i = 0, len = formList.length; i < len; i++) {
       formList[i].removeEventListener(Event.FORMRESET, handleFormReset)
+      formList[i][customProperty] = undefined
     }
   },
 }

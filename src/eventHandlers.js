@@ -23,7 +23,8 @@ function handleInputChange() {
 }
 
 function handleFormReset() {
-  const customFileList = [].slice.call(this.querySelectorAll(Selector.CUSTOMFILE))
+  const customFileList = [].slice.call(this.querySelectorAll(Selector.INPUT))
+    .filter((input) => !!input.bsCustomFileInput)
 
   for (let i = 0, len = customFileList.length; i < len; i++) {
     restoreDefaultText(customFileList[i])
