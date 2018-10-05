@@ -12,7 +12,7 @@ A little plugin which makes Bootstrap 4 custom file input dynamic with no depend
 
 You can use it on [React](https://stackblitz.com/edit/bs-custom-file-input-react) and [Angular](https://stackblitz.com/edit/bs-custom-file-input-angular) too because this plugin is written with the most used JavaScript framework: [VanillaJS](http://vanilla-js.com/).
 
-[Démo](https://rawgit.com/Johann-S/bs-custom-file-input/master/demo/index.html)
+[Demo](https://rawgit.com/Johann-S/bs-custom-file-input/master/demo/index.html)
 
 Features:
 
