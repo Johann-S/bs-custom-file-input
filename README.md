@@ -82,14 +82,14 @@ Finds your Bootstrap custom file input and will make them dynamic.
 
 #### Parameters
 
-- inputSelector
-  - *default value*: `.custom-file input[type="file"]`
-  - *type*: `string`
+- `inputSelector`
+  - default value: `.custom-file input[type="file"]`
+  - type: `string`
 
   You can pass a custom input selector, but be sure to pass a **file input selector**
-- formSelector
-  - *default value*: `form`
-  - *type*: `string`
+- `formSelector`
+  - default value: `form`
+  - type: `string`
 
   Allows you to pass a custom form selector, but be sure to pass a **form selector**
 
@@ -99,7 +99,7 @@ Removes this plugin from your Bootstrap custom file input and restore them at th
 
 ## Compatibility
 
-bsCustomFileInput is compatible with :
+bsCustomFileInput is compatible with:
 
 - IE10+
 - Edge
@@ -113,7 +113,7 @@ You can find our BrowserStack list of browsers [here](https://github.com/Johann-
 
 ## Support me
 
-If you want to thank me, you can support me and become my [Patron](https://www.patreon.com/jservoire) :wink:
+If you want to thank me, you can support me and become my [Patron](https://www.patreon.com/jservoire)
 
 ## Thanks
 
