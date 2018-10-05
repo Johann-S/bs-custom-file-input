@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -64,11 +63,12 @@
         <div class="col-sm-12 mt-5">
           <h3>Example with label containing a child</h3>
           <div class="custom-file mt-2">
-            <input id="inputGroupFile04" type="file" multiple class="custom-file-input" multiple>
+            <input id="inputGroupFile04" type="file" class="custom-file-input" multiple>
             <label class="custom-file-label" for="inputGroupFile04">
               <span class="d-inline-block text-truncate w-75">Choose several files</span>
             </label>
           </div>
+      </div>
       </div>
     </div>
 
@@ -79,7 +79,7 @@
 
         var btn = document.getElementById('btnResetForm')
         var form = document.querySelector('form')
-        btn.addEventListener('click', function () {
+        btn.addEventListener('click', function() {
           form.reset()
         })
       });
