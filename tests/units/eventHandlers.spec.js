@@ -40,6 +40,23 @@ describe('eventHandlers.js', function () {
       input.dispatchEvent(new Event('change'))
     })
 
+    it('should remove fakepath if found', function (done) {
+      bsCustomFileInput.init()
+
+      var label = document.querySelector('.custom-file-label')
+
+      input.addEventListener('change', function () {
+        expect(label.innerHTML).equal('myFakeFile.exe')
+        done()
+      })
+
+      Object.defineProperty(input, 'value', {
+        value: 'C:\\fakepath\\myFakeFile.exe',
+      })
+
+      input.dispatchEvent(new Event('change'))
+    })
+
     it('should change the label when files are selected', function (done) {
       bsCustomFileInput.init()
 
