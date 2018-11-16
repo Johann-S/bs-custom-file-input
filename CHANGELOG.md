@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/Johann-S/bs-custom-file-input/compare/v1.1.1...v1.3.0) (2018-11-16)
+
+
+### Bug Fixes
+
+* **core:** remove unused events and better destroy method ([2845f4e](https://github.com/Johann-S/bs-custom-file-input/commit/2845f4e))
+* **display:** restore text on empty values ([21ba2c0](https://github.com/Johann-S/bs-custom-file-input/commit/21ba2c0))
+
+
+### Features
+
+* **core:** allow to use children in label elements ([e92a581](https://github.com/Johann-S/bs-custom-file-input/commit/e92a581))
+* **demo:** add a demo ([22f925b](https://github.com/Johann-S/bs-custom-file-input/commit/22f925b))
+* **display:** remove fakepath ([0cd194a](https://github.com/Johann-S/bs-custom-file-input/commit/0cd194a))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/Johann-S/bs-custom-file-input/compare/v1.1.1...v1.2.0) (2018-09-18)
 
