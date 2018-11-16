@@ -1,26 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+    <meta name="description" content="Bootstrap 4 custom file input dynamic with no dependencies.">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
-    <title>BS Custom File Input test</title>
+    <title>Bootstrap custom file input</title>
+    <style>
+      .no-underline {
+        text-decoration: none !important;
+      }
+      .navbar {
+        min-height: 60px;
+      }
+      .bs-icon {
+        max-width: 25px;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container mt-1">
-      <div class="row">
-        <h1>BS Custom File Input tests</h1>
-
-        <div class="col-sm-12 mt-2">
-          <button class="btn btn-primary" onClick="bsCustomFileInput.destroy()">
-            Destroy all
-          </button>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand navbar-dark bg-dark text-white">
+      <div class="container">
+        <h1 class="mb-0 h5 py-1">bs-custom-file-input</h1>
+        <div class="navbar-nav-scroll">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Johann-S/bs-custom-file-input/blob/master/README.md#how-to-use-it">Documentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Johann-S/bs-custom-file-input/blob/master/README.md#install">
+                Download
+              </a>
+            </li>
+          </ul>
         </div>
-
-        <div class="col-sm-12 mt-5">
+        <a href="https://github.com/Johann-S/bs-custom-file-input" class="text-white ml-3 py-1 no-underline" title="View project on GitHub">
+          <svg id="i-github" class="bs-icon" viewBox="0 0 64 64" width="32" height="32">
+            <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+    <div class="container flex-grow-1 flex-shrink-0 mt-2">
+      <div class="row">
+        <div class="col-sm-12">
           <h3>Examples</h3>
           <div class="input-group mt-3">
             <div class="custom-file">
@@ -71,7 +94,17 @@
       </div>
       </div>
     </div>
-
+    <footer class="bg-light p-3 mt-4">
+      <div class="container">
+        <p class="text-muted text-center mb-0">
+          Made with 
+          <svg id="i-heart" class="bs-icon text-danger" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M4 16 C1 12 2 6 7 4 12 2 15 6 16 8 17 6 21 2 26 4 31 6 31 12 28 16 25 20 16 28 16 28 16 28 7 20 4 16 Z" />
+          </svg>
+          by <a href="https://github.com/Johann-S">Johann-S</a>
+        </p>
+      </div>
+    </footer>
     <script src="dist/bs-custom-file-input.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
