@@ -2,13 +2,20 @@ import { findFirstChildNode, restoreDefaultText } from './util'
 import Selector from './selector'
 
 const fileApi = !!window.File
+const FAKE_PATH = 'fakepath'
+const FAKE_PATH_SEPARATOR = '\\'
 
 const getSelectedFiles = (input) => {
   if (input.hasAttribute('multiple') && fileApi) {
-    const files = [].slice.call(input.files)
+    return [].slice.call(input.files)
       .map((file) => file.name)
+      .join(', ')
+  }
 
-    return files.join(', ')
+  if (input.value.indexOf(FAKE_PATH) !== -1) {
+    const splittedValue = input.value.split(FAKE_PATH_SEPARATOR)
+
+    return splittedValue[splittedValue.length - 1]
   }
 
   return input.value
