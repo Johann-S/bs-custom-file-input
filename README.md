@@ -50,8 +50,8 @@ npm install bs-custom-file-input --save
 
 CDN | Link
 ------------ | -------------
-unpkg | [`https://unpkg.com/bs-custom-file-input`](https://unpkg.com/bs-custom-file-input)
-unpkg, minified | [`https://unpkg.com/bs-custom-file-input/dist/bs-custom-file-input.min.js`](https://unpkg.com/bs-custom-file-input/dist/bs-custom-file-input.min.js)
+jsDelivr | [`https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js`](https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js)
+jsDelivr, minified | [`https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js`](https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js)
 
 ## How to use it
 
