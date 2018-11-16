@@ -26,7 +26,13 @@ function handleInputChange() {
 
   if (label) {
     const element = findFirstChildNode(label)
-    element.innerHTML = getSelectedFiles(this)
+    const inputValue = getSelectedFiles(this)
+
+    if (inputValue.length) {
+      element.innerHTML = inputValue
+    } else {
+      restoreDefaultText(this)
+    }
   }
 }
 
