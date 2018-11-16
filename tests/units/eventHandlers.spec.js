@@ -57,6 +57,36 @@ describe('eventHandlers.js', function () {
       input.dispatchEvent(new Event('change'))
     })
 
+    it('should restore default text if value is empty', function (done) {
+      bsCustomFileInput.init()
+
+      var label = document.querySelector('.custom-file-label')
+
+      function firstListener() {
+        expect(label.innerHTML).equal('myFakeFile.exe')
+        input.removeEventListener('change', firstListener)
+
+        input.addEventListener('change', secondListener)
+        input.value = ''
+        input.dispatchEvent(new Event('change'))
+      }
+
+      function secondListener() {
+        expect(label.innerHTML).equal('Choose file')
+        done()
+      }
+
+      input.addEventListener('change', firstListener)
+
+      Object.defineProperty(input, 'value', {
+        value: 'myFakeFile.exe',
+        configurable: true,
+        writable: true,
+      })
+
+      input.dispatchEvent(new Event('change'))
+    })
+
     it('should change the label when files are selected', function (done) {
       bsCustomFileInput.init()
 
