@@ -1,5 +1,5 @@
 /*!
- * bsCustomFileInput v1.2.0 (https://github.com/Johann-S/bs-custom-file-input)
+ * bsCustomFileInput v1.3.0 (https://github.com/Johann-S/bs-custom-file-input)
  * Copyright 2018 Johann-S <johann.servoire@gmail.com>
  * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
  */
@@ -56,13 +56,19 @@
   };
 
   var fileApi = !!window.File;
+  var FAKE_PATH = 'fakepath';
+  var FAKE_PATH_SEPARATOR = '\\';
 
   var getSelectedFiles = function getSelectedFiles(input) {
     if (input.hasAttribute('multiple') && fileApi) {
-      var files = [].slice.call(input.files).map(function (file) {
+      return [].slice.call(input.files).map(function (file) {
         return file.name;
-      });
-      return files.join(', ');
+      }).join(', ');
+    }
+
+    if (input.value.indexOf(FAKE_PATH) !== -1) {
+      var splittedValue = input.value.split(FAKE_PATH_SEPARATOR);
+      return splittedValue[splittedValue.length - 1];
     }
 
     return input.value;
@@ -73,7 +79,13 @@
 
     if (label) {
       var element = findFirstChildNode(label);
-      element.innerHTML = getSelectedFiles(this);
+      var inputValue = getSelectedFiles(this);
+
+      if (inputValue.length) {
+        element.innerHTML = inputValue;
+      } else {
+        restoreDefaultText(this);
+      }
     }
   }
 
