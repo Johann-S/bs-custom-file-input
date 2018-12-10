@@ -45,6 +45,11 @@
     "url": "git+https://github.com/Johann-S/bs-custom-file-input.git"
   },
   "license": "MIT",
+  "standard-version": {
+    "scripts": {
+      "postbump": "npm run build && git add ./dist/"
+    }
+  },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.1.6",
