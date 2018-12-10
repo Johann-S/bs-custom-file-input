@@ -23,7 +23,7 @@
     "js-lint": "eslint ./src ./tests",
     "prejs-test": "cross-env NODE_ENV=test rollup -c --environment TEST",
     "js-test": "karma start tests/karma.conf.js",
-    "release": "standard-version",
+    "release": "standard-version -a",
     "test": "npm run js-lint && npm run js-test"
   },
   "files": [
@@ -47,7 +47,8 @@
   "license": "MIT",
   "standard-version": {
     "scripts": {
-      "postbump": "npm run build && git add ./dist/"
+      "postbump": "npm run build",
+      "precommit": "git add dist"
     }
   },
   "dependencies": {},
