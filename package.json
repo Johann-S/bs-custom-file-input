@@ -28,8 +28,7 @@
   },
   "files": [
     "dist/*.{js,map}",
-    "bs-custom-file-input.d.ts",
-    "CHANGELOG.md"
+    "bs-custom-file-input.d.ts"
   ],
   "keywords": [
     "bootstrap",
