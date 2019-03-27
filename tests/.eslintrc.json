@@ -10,9 +10,9 @@
   },
   "extends": "../.eslintrc.json",
   "globals": {
-    "bsCustomFileInput": "off",
-    "expect": "off",
-    "sinon": "off"
+    "bsCustomFileInput": false,
+    "expect": false,
+    "sinon": false
   },
   "rules": {
     "no-var": "off"
