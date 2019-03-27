@@ -20,7 +20,7 @@
     "browserstack": "npm run build && cross-env browser=true karma start tests/karma.conf.js",
     "coveralls": "shx cat tests/coverage/lcov.info | coveralls",
     "dev": "rollup --environment DEV -c -w",
-    "js-lint": "eslint src/ tests/",
+    "js-lint": "eslint .",
     "prejs-test": "cross-env NODE_ENV=test rollup -c --environment TEST",
     "js-test": "karma start tests/karma.conf.js",
     "release": "standard-version -a",
