@@ -7,15 +7,27 @@
   "extends": "eslint:recommended",
   "parser": "babel-eslint",
   "rules": {
-    "comma-dangle": ["error", "always-multiline"],
-    "indent": ["error", 2, {
-      "SwitchCase": 1
-    }],
-    "linebreak-style": ["error", "unix"],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "indent": [
+      "error",
+      2, {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
     "no-tabs": "error",
     "no-trailing-spaces": "error",
     "no-var": "error",
-    "semi": ["error", "never"],
+    "semi": [
+      "error",
+      "never"
+    ],
     "sort-imports": "error"
   }
 }
