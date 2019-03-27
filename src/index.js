@@ -23,6 +23,7 @@ const bsCustomFileInput = {
         writable: true,
       })
 
+      handleInputChange.call(input)
       input.addEventListener(Event.INPUTCHANGE, handleInputChange)
     }
 

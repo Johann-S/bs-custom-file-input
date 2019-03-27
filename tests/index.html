@@ -74,15 +74,13 @@
 
     <script src="./coverage/bs-custom-file-input.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        bsCustomFileInput.init()
+      bsCustomFileInput.init()
 
-        var btn = document.getElementById('btnResetForm')
-        var form = document.querySelector('form')
-        btn.addEventListener('click', function () {
-          form.reset()
-        })
-      });
+      var btn = document.getElementById('btnResetForm')
+      var form = document.querySelector('form')
+      btn.addEventListener('click', function () {
+        form.reset()
+      })
     </script>
   </body>
 </html>

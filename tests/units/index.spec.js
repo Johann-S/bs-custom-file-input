@@ -72,6 +72,22 @@ describe('index.js', function () {
       expect(testInput.bsCustomFileInput).not.undefined
       expect(otherInput.bsCustomFileInput).undefined
     })
+
+    it('should display already selected files on init', function () {
+      input.setAttribute('multiple', '')
+      Object.defineProperty(input, 'files', {
+        value: [
+          new File([], 'myFakeFile.exe'),
+          new File([], 'fakeImage.png'),
+        ],
+      })
+
+      bsCustomFileInput.init()
+
+      var label = document.querySelector('.custom-file-label')
+
+      expect(label.innerHTML).equal('myFakeFile.exe, fakeImage.png')
+    })
   })
 
   describe('destroy', function () {
