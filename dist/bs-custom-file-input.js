@@ -1,13 +1,13 @@
 /*!
- * bsCustomFileInput v1.3.1 (https://github.com/Johann-S/bs-custom-file-input)
- * Copyright 2018 Johann-S <johann.servoire@gmail.com>
+ * bsCustomFileInput v1.3.2 (https://github.com/Johann-S/bs-custom-file-input)
+ * Copyright 2018 - 2019 Johann-S <johann.servoire@gmail.com>
  * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.bsCustomFileInput = factory());
-}(this, (function () { 'use strict';
+  (global = global || self, global.bsCustomFileInput = factory());
+}(this, function () { 'use strict';
 
   var Selector = {
     CUSTOMFILE: '.custom-file input[type="file"]',
@@ -125,6 +125,7 @@
           },
           writable: true
         });
+        handleInputChange.call(input);
         input.addEventListener(Event.INPUTCHANGE, handleInputChange);
       }
 
@@ -162,5 +163,5 @@
 
   return bsCustomFileInput;
 
-})));
+}));
 //# sourceMappingURL=bs-custom-file-input.js.map
