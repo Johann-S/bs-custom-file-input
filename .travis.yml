@@ -3,9 +3,7 @@ addons:
 language: node_js
 node_js:
   - "8"
-cache:
-  directories:
-    - "$HOME/.npm"
+cache: npm
 after_success:
   - npm run coveralls
 stages:
