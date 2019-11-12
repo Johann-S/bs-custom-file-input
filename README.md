@@ -3,8 +3,8 @@
 [![npm version](https://img.shields.io/npm/v/bs-custom-file-input.svg)](https://www.npmjs.com/package/bs-custom-file-input)
 [![dependencies Status](https://img.shields.io/david/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input)
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-custom-file-input.svg)](https://david-dm.org/Johann-S/bs-custom-file-input?type=dev)
-[![Build Status](https://img.shields.io/travis/Johann-S/bs-custom-file-input/master.svg)](https://travis-ci.org/Johann-S/bs-custom-file-input)
-![Coveralls github branch](https://img.shields.io/coveralls/github/Johann-S/bs-custom-file-input/master.svg)
+[![Build Status](https://github.com/Johann-S/bs-custom-file-input/workflows/Tests/badge.svg)](https://github.com/Johann-S/bs-custom-file-input/actions?workflow=Tests)
+[![Coverage Status](https://img.shields.io/coveralls/github/Johann-S/bs-custom-file-input/master.svg)](https://coveralls.io/github/Johann-S/bs-custom-file-input?branch=master)
 [![JS gzip size](https://img.badgesize.io/Johann-S/bs-custom-file-input/master/dist/bs-custom-file-input.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/Johann-S/bs-custom-file-input/tree/master/dist/bs-custom-file-input.min.js)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=L1Z6cllmR0pVVUZBRmxTaGtEcm1QamUxdTZoQmRLeUFvWVlOcW5iODNVWT0tLUZTVWRKUzc4T05xSmhlZlJObVRKNEE9PQ==--177788f5ac0c50dcd3dd3eed31e39662d5612e7f)](https://www.browserstack.com/automate/public-build/L1Z6cllmR0pVVUZBRmxTaGtEcm1QamUxdTZoQmRLeUFvWVlOcW5iODNVWT0tLUZTVWRKUzc4T05xSmhlZlJObVRKNEE9PQ==--177788f5ac0c50dcd3dd3eed31e39662d5612e7f)
 
