@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.4](https://github.com/Johann-S/bs-custom-file-input/compare/v1.3.3...v1.3.4) (2020-02-03)
+
+
+### Bug Fixes
+
+* **core:** forgotten innerHTML ([dbffaa2](https://github.com/Johann-S/bs-custom-file-input/commit/dbffaa2eb060ab43cbec7739fe45a6446f68053a))
+
 ### [1.3.3](https://github.com/Johann-S/bs-custom-file-input/compare/v1.3.2...v1.3.3) (2020-02-03)
 
 

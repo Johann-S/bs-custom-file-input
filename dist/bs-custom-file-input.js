@@ -1,5 +1,5 @@
 /*!
- * bsCustomFileInput v1.3.3 (https://github.com/Johann-S/bs-custom-file-input)
+ * bsCustomFileInput v1.3.4 (https://github.com/Johann-S/bs-custom-file-input)
  * Copyright 2018 - 2020 Johann-S <johann.servoire@gmail.com>
  * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
  */
@@ -23,7 +23,7 @@
     var label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL);
 
     if (label) {
-      defaultText = label.innerHTML;
+      defaultText = label.textContent;
     }
 
     return defaultText;
