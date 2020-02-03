@@ -7,7 +7,7 @@ const getDefaultText = (input) => {
   const label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL)
 
   if (label) {
-    defaultText = label.innerHTML
+    defaultText = label.textContent
   }
 
   return defaultText
