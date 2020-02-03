@@ -40,6 +40,24 @@ describe('eventHandlers.js', function () {
       input.dispatchEvent(new Event('change'))
     })
 
+    it('should change the label when a file is selected and escape html', function (done) {
+      bsCustomFileInput.init()
+
+      var label = document.querySelector('.custom-file-label')
+      var expectedValue = '&lt;svg onload=alert(1)&gt;'
+
+      input.addEventListener('change', function () {
+        expect(label.innerHTML).equal(expectedValue)
+        done()
+      })
+
+      Object.defineProperty(input, 'value', {
+        value: '<svg onload=alert(1)>',
+      })
+
+      input.dispatchEvent(new Event('change'))
+    })
+
     it('should remove fakepath if found', function (done) {
       bsCustomFileInput.init()
 

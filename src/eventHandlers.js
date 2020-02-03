@@ -29,7 +29,7 @@ function handleInputChange() {
     const inputValue = getSelectedFiles(this)
 
     if (inputValue.length) {
-      element.innerHTML = inputValue
+      element.textContent = inputValue
     } else {
       restoreDefaultText(this)
     }

@@ -34,7 +34,8 @@ const restoreDefaultText = (input) => {
 
   if (label) {
     const element = findFirstChildNode(label)
-    element.innerHTML = defaultText
+
+    element.textContent = defaultText
   }
 }
 
