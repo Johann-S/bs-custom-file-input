@@ -73,6 +73,6 @@
     "rollup-plugin-uglify": "^6.0.4",
     "shx": "^0.3.2",
     "sinon": "^7.5.0",
-    "standard-version": "^7.1.0"
+    "standard-version": "^8.0.1"
   }
 }
