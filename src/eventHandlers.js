@@ -13,9 +13,7 @@ const getSelectedFiles = (input) => {
   }
 
   if (input.value.indexOf(FAKE_PATH) !== -1) {
-    const splittedValue = input.value.split(FAKE_PATH_SEPARATOR)
-
-    return splittedValue[splittedValue.length - 1]
+    return input.value.split(FAKE_PATH_SEPARATOR).pop()
   }
 
   return input.value
